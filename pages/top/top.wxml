@@ -1,0 +1,4 @@
+<import src="../../template/movielist.wxml"/>
+<view class="container">
+    <template is="movielist" data="{{...datas}}"/>
+</view>

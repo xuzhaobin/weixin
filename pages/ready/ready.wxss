@@ -1,0 +1,12 @@
+.searchbox{
+	justify-content: center;
+}
+.set{
+	display: none;
+}
+.searchview{
+	width: 670rpx;
+}
+.searchicon{
+	margin-left: 225rpx;
+}

@@ -1,0 +1,72 @@
+<view class="container">
+    <view class="videobox">
+        <image wx:if="{{showinfo}}" mode="scaleToFill" class="videoimg" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1484150452564&di=1d77c2ae898d9784ece8e82daade5a43&imgtype=0&src=http%3A%2F%2Fimg.funshion.com%2Fattachment%2Fimages%2F1583%2F90553841472D3C2CDBB3F4F705976860.jpg"></image>
+        <video 
+        wx:if="{{!showinfo}}"
+        class="vid"
+        controls="{{controls}}"
+        autoplay="{{true}}"
+        objectFit="fill"
+        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"></video>
+        <view class="info" wx:if="{{showinfo}}" id="{{movieid}}" bindtap="tophotos">
+            <text class="name">{{title}}</text>
+              <view class="stars">
+                 <image class="starimg" src="{{star[0]}}"/>
+                 <image class="starimg" src="{{star[1]}}"/>
+                 <image class="starimg" src="{{star[2]}}"/>
+                 <image class="starimg" src="{{star[3]}}"/>
+                 <image class="starimg" src="{{star[4]}}"/> {{average}}
+              </view>
+            <text class="nums">45张剧照</text>
+        </view>
+        <view class="play" bindtap="play" wx:if="{{showinfo}}">
+           <view class="playin"></view>
+        </view>
+        <image class="sc" src="{{sc}}" bindtap="{{scfun}}"></image>
+    </view>
+    <view class="pingbox">
+        <view class="pingtab">
+            <view class="tabbtn {{(index==0)?'chose':''}}" data-current="0" bindtap="tabslide">影评</view>
+            <view class="tabbtn {{(index==1)?'chose':''}}" data-current="1" bindtap="tabslide">短评</view>
+            <view class="line {{(index==1)?'rightline':''}}"></view>
+        </view>
+        <swiper class="swiper" current="{{current}}" bindchange="changes">
+            <swiper-item class="items">
+            <scroll-view scroll-y="true" class="slide">
+                <view wx:for="{{pinglist}}" class="pings">
+                  <view class="pinger">
+                      <image class="photo" src="{{item.author.avatar}}"></image>
+                      <view class="photo_right">
+                          <text class="ping_title">{{item.title}}</text>
+                          <text class="ping_time">{{item.author.name}} {{item.updated}}</text>
+                      </view>
+                  </view>
+                  <view class="isping">
+                      {{item.summary}}
+                  </view>
+              </view>
+            
+            </scroll-view>
+            
+            </swiper-item>
+            <swiper-item class="slide">
+              <scroll-view scroll-y="true" class="slide">
+                 <block wx:for="{{pinglist}}" wx:key="*this">
+                <view class="pings">
+                  <view class="pinger">
+                      <image class="photo" src="{{item.author.avatar}}"></image>
+                      <view class="photo_right">
+                          <text class="ping_title">{{item.title}}</text>
+                          <text class="ping_time">{{item.author.name}} {{item.updated}}</text>
+                      </view>
+                  </view>
+                  <view class="isping">
+                      {{item.summary}}
+                  </view>
+              </view>
+              </block>   
+            </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>    
+</view>

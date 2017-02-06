@@ -1,0 +1,15 @@
+<view class="container">
+	<scroll-view scroll-y="true" class="listbox">
+		<view class="lists" wx:for="{{lists}}">
+			<image class="img" src="{{item.images.small}}"/>
+			<view class="info" data-mid="{{item.id}}" data-title="{{item.title}}" bindtap="todetail">
+				<view class="name">
+					<text class="left">{{item.title}}</text>
+					<text class="right">{{item.rating.average}}</text>
+				</view>
+				<view class="oldname">{{item.casts[0].name}}</view>
+				<view class="time">上映年份:{{item.year}}</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>	

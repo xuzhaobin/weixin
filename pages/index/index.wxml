@@ -1,0 +1,32 @@
+<view class="out {{style}}">
+	<view class="left_list">
+		<view class="left_lists">
+			<view bindtap="tosc" class="lefts">我的收藏</view>
+			<view class="lefts">
+				夜间模式
+				<switch class="switch" bindchange="switch1Change"/>
+			</view>
+			<view class="lefts" bindtap="scan">扫一扫</view>
+			<view class="lefts" bindtap="more">更多</view>
+		</view>
+	</view>
+	<view class="container" animation="{{aniData}}">
+	    <image mode="aspectFill" class="imgbig" src="{{bigimg}}"></image>
+	    <view class="lineback"></view>
+	    <image src="../../imgs/list_index.png" class="set" bindtap="set"></image>
+        <navigator url="../search/search" class="searchview">
+            <icon class="searchicon" type="search" size="22" color="#fff"/>
+        </navigator>
+	    <swiper class="swiper" bindchange="changes">
+            <swiper-item class="items" wx:for="{{datas.hotlist}}">
+          		<image class="img1" data-mid="{{item.id}}" data-title="{{item.title}}" bindtap="todetail" src="{{item.images.medium}}"></image>
+            	
+            	<view class="backs"></view>
+            	<text class="text1">{{item.title}}</text>
+            	<text class="text2">"{{item.genres[0]}}"</text>
+            	<text class="text3">主演：{{item.casts[0].name}}、{{item.casts[1].name}}、{{item.casts[2].name}}</text>
+            </swiper-item>          
+        </swiper>
+	    <view class="cloth" wx:if="{{state}}" bindtap="tobig"></view>
+	</view>
+</view>

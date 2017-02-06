@@ -1,0 +1,48 @@
+/* pages/collection/collection.wxss */
+.listbox{
+	height: 100%;
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+}
+.lists{
+  height: 200rpx;
+  border-bottom: 1px solid #ececec;
+  padding:15rpx;
+  display: flex;
+}
+.img{
+  height: 170rpx;
+  width: 120rpx;
+  margin-right: 20rpx;
+}
+.info{
+  height: 170rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.name{
+  display: flex;
+  justify-content: space-between;
+}
+.left{
+	font-size: 30rpx;
+	color: #333;
+}
+.right{
+	font-size: 30rpx;
+	color: deepskyblue;
+}
+.oldname{
+	color: #999;
+	font-size: 28rpx;
+	margin-top: -50rpx;
+}
+.time{
+	color: #666;
+	font-size: 28rpx;
+}

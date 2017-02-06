@@ -1,0 +1,10 @@
+<view class="container">
+   <swiper class="swiper" current="{{current}}" bindchange="changes">
+            <swiper-item class="items" wx:for="{{photos}}">
+            	<image mode="widthFix" src="{{item}}" class="img"></image>
+            </swiper-item>
+        </swiper>
+        <view class="download">
+        	<image bindtap="downimg" src="../../imgs/download.png" class="downicon"></image>
+        </view>
+</view>

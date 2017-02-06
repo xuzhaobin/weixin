@@ -1,0 +1,119 @@
+/**app.wxss**/
+page{
+  height: 100%;
+  width:100%;
+  background-color: #f2f3f4;
+  overflow: hidden;
+}
+view{
+  box-sizing: border-box;
+}
+.container {
+  height: 100%;
+  display: flex;
+  background: #f6f6f6;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.movieimg{
+    height: 70%;
+    width:100%;
+}
+.moviename{
+    color: #666;
+    width:100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.moviestar{
+    color: red;
+    font-size: 30rpx;
+}
+.fuck{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.movies{
+     display: flex;
+    box-sizing: border-box;
+    width: 33.3333%;
+    padding: 5rpx;
+    height: 500rpx;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12rpx;
+} 
+.searchbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  background-color: #f6f6f6;
+}
+.scrollview{
+  box-sizing: border-box;
+  padding-top: 70rpx;
+  height: 100%;
+  width: 100%;
+}
+.searchview{
+  height: 50rpx;
+  width: 520rpx;
+  padding-right: 40rpx;
+  border:1px solid #3a3b3c;
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.set{
+  height: 45rpx;
+  width: 50rpx;
+}
+.searchicon{
+  margin-left: 165rpx;
+}
+.searchtext{
+  color: #aaabac;
+  font-size: 24rpx;
+}
+.lowershow{
+  height: 60rpx;
+  width: 100%;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #b5c5d5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

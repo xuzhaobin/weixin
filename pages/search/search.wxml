@@ -1,0 +1,24 @@
+<view class="container">
+	<view class="inputbox">
+		<input class="searchinput" placeholder="请输入类别、影名" focus="true" bindconfirm="search" value="{{value}}"/>
+	</view>
+	<view class="classify" wx:if="{{searching}}">
+		<text class="tit">热门分类</text>
+		<view class="classifys">
+			<view class="names" wx:for="{{names}}" data-name="{{item}}" bindtap="chosetext">{{item}}</view>
+		</view>
+	</view>
+	<scroll-view scroll-y="true" class="listbox" wx:if="{{!searching}}">
+		<view class="lists" wx:for="{{lists}}">
+			<image class="img" src="{{item.images.small}}"/>
+			<view class="info" data-mid="{{item.id}}" data-title="{{item.title}}" bindtap="todetail">
+				<view class="name">
+					<text class="left">{{item.title}}</text>
+					<text class="right">{{item.rating.average}}</text>
+				</view>
+				<view class="oldname">{{item.casts[0].name}}</view>
+				<view class="time">上映年份:{{item.year}}</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>

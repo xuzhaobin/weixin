@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/ready/ready",
+    "pages/top/top",
+    "pages/collection/collection",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/photos/photos"
+    
+    ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#f6f6f6",
+    "navigationBarTitleText": "正在热播",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#6c6c6c",
+    "selectedColor": "#cc611f",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "imgs/hot.png",
+      "selectedIconPath": "imgs/hot_chose.png",
+      "text": "正在热播"
+    },{
+      "pagePath": "pages/ready/ready",
+      "iconPath": "imgs/ready.png",
+      "selectedIconPath": "imgs/ready_chose.png",
+      "text": "即将上映"
+    },{
+      "pagePath": "pages/top/top",
+      "iconPath": "imgs/top.png",
+      "selectedIconPath": "imgs/top_chose.png",
+      "text": "Top250"
+    }]
+  }
+}

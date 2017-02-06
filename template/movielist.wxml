@@ -1,0 +1,24 @@
+<template name="movielist">
+    <view class="searchbox">
+        <image src="../../imgs/list.png" class="set" bindtap="set"></image>
+        <navigator url="../search/search" class="searchview">
+            <text class="searchtext">搜索电影</text>
+            <icon class="searchicon" type="search" size="20" color="#3a3b3c"/>
+        </navigator>
+    </view>
+    <scroll-view
+    class="scrollview"
+    scroll-y="true" 
+    bindscrolltoupper="upper" 
+    bindscrolltolower="lower">
+            <view class="fuck">
+    <view class="movies" wx:for="{{hotlist}}"> 
+            <image bindtap="todetail" data-mid="{{item.id}}" data-title="{{item.title}}" class="movieimg" src="{{item.images.medium}}"></image>
+        
+            <text class="moviename">{{item.title}}</text>
+            <text class="moviestar">{{item.rating.average}}</text>
+    </view>
+    <view class="lowershow" wx-if="{{isloading}}">正在加载更多...</view>
+            </view>
+    </scroll-view>
+</template>

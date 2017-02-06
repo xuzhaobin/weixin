@@ -1,0 +1,207 @@
+/* pages/detail/detail.wxss */
+.container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.videoimg{
+    height: 100%;
+    width: 100%;
+}
+.videobox{
+    height:480rpx;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.vid{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.info{
+    color: #fff;
+    position: absolute;
+    left: 20rpx;
+    bottom: 10rpx;
+    display: flex;
+    flex-direction: column;
+    z-index: 999999;
+
+}
+.name{
+    font-size: 30rpx;
+}
+.stars{
+    font-size: 28rpx;
+    margin: 10rpx 0;
+    display: flex;
+    align-items: center;
+}
+.nums{
+    font-size:25rpx;
+}
+.play{
+    height: 60rpx;
+    width: 60rpx;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20rpx;
+    right: 20rpx;
+    display: flex;
+    justify-content: center;
+    transform: rotateZ(90deg);
+}
+.playin{
+    width: 0;
+    height: 0;
+    border-bottom: 36rpx solid #fff;
+    border-left: 18rpx solid transparent;
+    border-right: 18rpx solid transparent;
+    transform: translateY(8rpx);
+}
+.pingbox{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.pingtab{
+    height: 70rpx;
+    width: 100%;
+    background: #fbfbfb;
+    display: flex;
+    position: relative;
+}
+.tabbtn{
+    flex:1;
+    line-height: 70rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #cacaca;
+}
+.chose{
+    color:red;
+}
+.swiper{
+    position: absolute;
+    height: 100%;
+    top: 70rpx;
+    width: 100%;
+}
+.items{
+    height: 100%;
+}
+.slide{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.line{
+    height: 5rpx;
+    width: 80rpx;
+    background-color: #666;
+    position: absolute;
+    bottom: 10rpx;
+    left: 148rpx;
+    transition: left 0.2s;
+}
+.rightline{
+    left: 522rpx;
+}
+.pings{
+    border-bottom: 1px solid #ececec;
+    box-sizing: border-box;
+    padding: 15rpx 10rpx;
+    display: flex;
+    flex-direction: column;
+    height: 270rpx;
+}
+.pinger{
+    width: 100%;
+    height: 80rpx;
+    padding: 10rpx 25rpx;
+    display: flex;
+    box-sizing: border-box;
+}
+.isping{
+    text-indent: 50rpx;
+    width: 100%;
+    height: 130rpx;
+    padding: 15rpx 15rpx 25rpx;
+    box-sizing: border-box;
+    font-size: 25rpx;
+    line-height: 30rpx;
+    display: -webkit-box!important;
+    overflow: hidden;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    
+}
+.photo{
+    height: 60rpx;
+    width: 60rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+.photo_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ping_title{
+    font-size: 28rpx;
+    color: #666;
+}
+.ping_time{
+    color: #acacac;
+    font-size: 20rpx;
+}
+.sc{
+    height: 50rpx;
+    width: 50rpx;
+    position: absolute;
+    right: 20rpx;
+    top: 20rpx;
+}
+.starimg{
+    height: 25rpx;
+    width: 25rpx;
+    margin-right: 5rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
